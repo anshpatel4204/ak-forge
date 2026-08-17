@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anshpatel4204.github.io/ak-forge/sitemap.xml

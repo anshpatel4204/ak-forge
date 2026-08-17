@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Client Onboarding — AK Forge</title>
+<meta name="description" content="Tell AK Forge about your business so we can get started quickly and accurately." />
+<link rel="icon" type="image/x-icon" href="assets/img/favicons/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png" />
+<link rel="apple-touch-icon" href="assets/img/favicons/favicon-512x512.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-badge"><img src="assets/img/logo-icon.png" alt="AK Forge logo" /></span>
+      <span class="brand-name">AK <span>Forge</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary btn-sm"><span class="btn-label">Start a Project</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="process.html">Process</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="container" style="max-width:840px;">
+      <span class="eyebrow">New Client</span>
+      <h1 class="hero-title">Client Onboarding Form</h1>
+      <p class="lede" style="margin-top:14px;">Please fill this in (or reply on WhatsApp) so we can get started quickly and accurately. Skip any section that doesn't apply to your project.</p>
+
+      <form id="onboarding-form" class="panel mt-40" novalidate>
+        <h3 class="h3" style="font-size:1.1rem;">1. Your Details</h3>
+        <div class="form-grid mt-40" style="margin-top:20px;">
+          <div class="field"><label for="clientName">Client Name <span class="req">*</span></label><input type="text" id="clientName" name="clientName" required /></div>
+          <div class="field"><label for="businessName">Business Name <span class="req">*</span></label><input type="text" id="businessName" name="businessName" required /></div>
+          <div class="field"><label for="ob-phone">Phone <span class="req">*</span></label><input type="tel" id="ob-phone" name="phone" required /></div>
+          <div class="field"><label for="ob-email">Email <span class="req">*</span></label><input type="email" id="ob-email" name="email" required /></div>
+          <div class="field"><label for="category">Business Category / Industry</label><input type="text" id="category" name="category" placeholder="e.g. Hardware Store, Salon, Restaurant" /></div>
+          <div class="field"><label for="years">Years in Business</label><input type="text" id="years" name="yearsInBusiness" /></div>
+        </div>
+        <div class="field"><label for="address">Business Address</label><input type="text" id="address" name="address" /></div>
+        <div class="form-grid">
+          <div class="field"><label for="existingWebsite">Existing Website (if any)</label><input type="text" id="existingWebsite" name="existingWebsite" /></div>
+          <div class="field"><label for="existingSocial">Existing Social Media Handles (if any)</label><input type="text" id="existingSocial" name="existingSocial" /></div>
+        </div>
+
+        <div class="divider"></div>
+        <h3 class="h3" style="font-size:1.1rem;">2. Services You're Taking</h3>
+        <div class="mt-40" style="margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:4px;">
+          <label class="checkbox-row"><input type="checkbox" name="svc_website" /> Website Development</label>
+          <label class="checkbox-row"><input type="checkbox" name="svc_branding" /> Logo &amp; Branding Design</label>
+          <label class="checkbox-row"><input type="checkbox" name="svc_gbp" /> Google Business Profile (Setup / Care)</label>
+          <label class="checkbox-row"><input type="checkbox" name="svc_poster" /> Poster / Graphic Design Pack</label>
+          <label class="checkbox-row"><input type="checkbox" name="svc_reel" /> Reel &amp; Video Editing Pack</label>
+          <label class="checkbox-row"><input type="checkbox" name="svc_social" /> Social Media Account Handling</label>
+          <label class="checkbox-row"><input type="checkbox" name="svc_care" /> Monthly Website Care</label>
+          <label class="checkbox-row"><input type="checkbox" name="svc_domain" /> Domain &amp; Hosting</label>
+        </div>
+
+        <div class="divider"></div>
+        <h3 class="h3" style="font-size:1.1rem;">3. Website Details <span style="font-weight:400; color:var(--text-muted); font-size:0.8rem;">(skip if not applicable)</span></h3>
+        <div class="mt-40" style="margin-top:16px;">
+          <div class="field"><label for="pages">Pages needed</label><input type="text" id="pages" name="pagesNeeded" placeholder="e.g. Home, About, Services, Gallery, Contact" /></div>
+          <div class="field"><label for="inspiration">Any websites you like the look of</label><input type="text" id="inspiration" name="websiteInspiration" placeholder="Competitor / inspiration links" /></div>
+          <label class="checkbox-row"><input type="checkbox" name="content_ready" /> Content/text is ready to share</label>
+          <label class="checkbox-row"><input type="checkbox" name="photos_ready" /> Photos are ready to share</label>
+          <label class="checkbox-row"><input type="checkbox" name="need_help_content" /> Need help writing content/photos</label>
+          <div class="field" style="margin-top:10px;"><label for="domainName">Preferred domain name</label><input type="text" id="domainName" name="preferredDomain" /></div>
+        </div>
+
+        <div class="divider"></div>
+        <h3 class="h3" style="font-size:1.1rem;">4. Logo &amp; Branding Details <span style="font-weight:400; color:var(--text-muted); font-size:0.8rem;">(skip if not applicable)</span></h3>
+        <div class="form-grid mt-40" style="margin-top:16px;">
+          <div class="field"><label for="style">Preferred style</label><input type="text" id="style" name="brandStyle" placeholder="modern / classic / minimal / playful / traditional" /></div>
+          <div class="field"><label for="colours">Preferred colours</label><input type="text" id="colours" name="preferredColours" /></div>
+          <div class="field"><label for="tagline">Tagline (if any)</label><input type="text" id="tagline" name="tagline" /></div>
+          <div class="field"><label for="brandInspo">Logos/brands you like</label><input type="text" id="brandInspo" name="brandInspiration" /></div>
+        </div>
+
+        <div class="divider"></div>
+        <h3 class="h3" style="font-size:1.1rem;">5. Google Business Profile Details <span style="font-weight:400; color:var(--text-muted); font-size:0.8rem;">(skip if not applicable)</span></h3>
+        <div class="mt-40" style="margin-top:16px;">
+          <label class="checkbox-row"><input type="checkbox" name="has_gbp" /> Already have a Google Business Profile</label>
+          <div class="form-grid" style="margin-top:10px;">
+            <div class="field"><label for="gbpCategory">Exact business category</label><input type="text" id="gbpCategory" name="gbpCategory" /></div>
+            <div class="field"><label for="hours">Business hours</label><input type="text" id="hours" name="businessHours" /></div>
+          </div>
+          <div class="field"><label for="gbpPhone">Phone number to display on the listing</label><input type="tel" id="gbpPhone" name="gbpPhone" /></div>
+        </div>
+
+        <div class="divider"></div>
+        <h3 class="h3" style="font-size:1.1rem;">6. Poster / Reel / Social Media Details <span style="font-weight:400; color:var(--text-muted); font-size:0.8rem;">(skip if not applicable)</span></h3>
+        <div class="mt-40" style="margin-top:16px;">
+          <div class="form-grid">
+            <div class="field"><label for="brandColours">Brand colours to use in designs</label><input type="text" id="brandColours" name="socialBrandColours" /></div>
+            <div class="field"><label for="handle">Instagram / Facebook handle</label><input type="text" id="handle" name="socialHandle" /></div>
+          </div>
+          <div class="field"><label for="festivals">Festivals/offers/events to highlight</label><input type="text" id="festivals" name="festivals" /></div>
+          <div class="field"><label for="frequency">Preferred posting frequency</label><input type="text" id="frequency" name="postingFrequency" /></div>
+        </div>
+
+        <div class="divider"></div>
+        <h3 class="h3" style="font-size:1.1rem;">7. What to Send Us</h3>
+        <div class="mt-40" style="margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:4px;">
+          <label class="checkbox-row"><input type="checkbox" name="send_logo" /> Logo files (if you already have one)</label>
+          <label class="checkbox-row"><input type="checkbox" name="send_photos" /> Photos of your shop/products/team</label>
+          <label class="checkbox-row"><input type="checkbox" name="send_content" /> Existing content/brochure/menu</label>
+          <label class="checkbox-row"><input type="checkbox" name="send_id" /> ID/address proof (for GBP verification)</label>
+          <label class="checkbox-row"><input type="checkbox" name="send_access" /> Login access to existing website/social accounts</label>
+        </div>
+
+        <div class="field mt-40" style="margin-top:24px;">
+          <label for="ob-notes">Anything else we should know?</label>
+          <textarea id="ob-notes" name="notes"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mt-40" style="margin-top:10px;">Submit Onboarding Form
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <div class="form-status"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span class="js-year"></span> AK Forge. All rights reserved.</span>
+      <a href="index.html" style="color:var(--accent-2);">Back to Home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data/site-data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
