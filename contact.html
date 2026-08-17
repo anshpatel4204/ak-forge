@@ -49,8 +49,11 @@
 </header>
 
 <main id="main">
-  <section class="section">
-    <div class="container" style="display:grid; grid-template-columns:0.95fr 1.05fr; gap:44px; align-items:flex-start;">
+  <section class="section" style="position:relative; overflow:hidden;">
+    <div class="hero3d-corner" data-hero3d="torus">
+      <div class="hero3d-fallback"></div>
+    </div>
+    <div class="container" style="display:grid; grid-template-columns:0.95fr 1.05fr; gap:44px; align-items:flex-start; position:relative; z-index:1;">
       <div>
         <span class="eyebrow">Let's Build Something Amazing</span>
         <h1 class="hero-title">Have a project<br />in mind? Let's <span class="accent-text">make it</span> happen.</h1>
@@ -252,5 +255,8 @@
 
 <script src="assets/data/site-data.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="assets/js/hero-3d.js"></script>
+<script src="assets/js/tilt.js"></script>
 </body>
 </html>

@@ -68,15 +68,17 @@
           </a>
         </div>
       </div>
-      <div class="hero-art">
-        <div class="orb-field">
-          <div class="orb-ring" style="width:88%;height:88%;top:6%;left:6%;"></div>
-          <div class="orb-ring" style="width:64%;height:64%;top:18%;left:18%;border-color:rgba(91,140,255,0.25);"></div>
-          <div class="orb" style="width:18px;height:18px;background:var(--accent);top:8%;left:20%;box-shadow:0 0 24px 6px rgba(91,140,255,0.5);"></div>
-          <div class="orb" style="width:12px;height:12px;background:var(--slate-soft);bottom:14%;right:12%;box-shadow:0 0 18px 4px rgba(183,196,218,0.4);"></div>
-          <div class="orb" style="width:9px;height:9px;background:var(--accent-2);top:60%;left:4%;"></div>
-          <div class="mark-glow"></div>
-          <img class="hero-mark" src="assets/img/logo-primary.png" alt="AK Forge" />
+      <div class="hero-art" data-hero3d="cluster">
+        <div class="hero3d-fallback">
+          <div class="orb-field">
+            <div class="orb-ring" style="width:88%;height:88%;top:6%;left:6%;"></div>
+            <div class="orb-ring" style="width:64%;height:64%;top:18%;left:18%;border-color:rgba(91,140,255,0.25);"></div>
+            <div class="orb" style="width:18px;height:18px;background:var(--accent);top:8%;left:20%;box-shadow:0 0 24px 6px rgba(91,140,255,0.5);"></div>
+            <div class="orb" style="width:12px;height:12px;background:var(--slate-soft);bottom:14%;right:12%;box-shadow:0 0 18px 4px rgba(183,196,218,0.4);"></div>
+            <div class="orb" style="width:9px;height:9px;background:var(--accent-2);top:60%;left:4%;"></div>
+            <div class="mark-glow"></div>
+            <img class="hero-mark" src="assets/img/logo-primary.png" alt="AK Forge" />
+          </div>
         </div>
       </div>
     </div>
@@ -188,5 +190,8 @@
 
 <script src="assets/data/site-data.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="assets/js/hero-3d.js"></script>
+<script src="assets/js/tilt.js"></script>
 </body>
 </html>
