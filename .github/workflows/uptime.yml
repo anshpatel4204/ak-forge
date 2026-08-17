@@ -1,0 +1,55 @@
+name: Uptime Monitor
+
+# Pings the live AK Forge site every 30 minutes. If it's down or returns an
+# error, opens a GitHub issue — which triggers GitHub's own email
+# notification to the repo owner (no extra service or secret required).
+# When the site is back up, the issue is closed automatically.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+env:
+  # Update this if your Pages URL is different from the default.
+  SITE_URL: https://anshpatel4204.github.io/ak-forge/
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping site
+        id: ping
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 "${{ env.SITE_URL }}" || echo "000")
+          echo "status_code=$code" >> "$GITHUB_OUTPUT"
+          echo "Checked ${{ env.SITE_URL }} -> HTTP $code"
+
+      - name: Handle result
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATUS: ${{ steps.ping.outputs.status_code }}
+        run: |
+          set -e
+          existing=$(gh issue list --repo "${{ github.repository }}" --label site-down --state open --json number --jq '.[0].number // empty')
+
+          if [ "$STATUS" -lt 200 ] || [ "$STATUS" -ge 400 ]; then
+            echo "Site appears down (HTTP $STATUS)."
+            if [ -z "$existing" ]; then
+              gh issue create --repo "${{ github.repository }}" \
+                --title "🔴 Site down — HTTP $STATUS" \
+                --label site-down \
+                --body "The uptime check for ${{ env.SITE_URL }} returned HTTP $STATUS at $(date -u '+%Y-%m-%d %H:%M UTC'). This issue will auto-close once the site responds normally again."
+            else
+              echo "Issue #$existing already open, not creating a duplicate."
+            fi
+          else
+            echo "Site is up (HTTP $STATUS)."
+            if [ -n "$existing" ]; then
+              gh issue comment --repo "${{ github.repository }}" "$existing" --body "✅ Site is back up (HTTP $STATUS) at $(date -u '+%Y-%m-%d %H:%M UTC'). Closing this issue."
+              gh issue close --repo "${{ github.repository }}" "$existing"
+            fi
+          fi
