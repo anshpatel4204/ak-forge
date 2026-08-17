@@ -6,7 +6,7 @@
 
 // ⚠️ Set this to your deployed Google Apps Script Web App URL.
 // See /apps-script/README.md for step-by-step setup instructions.
-const FORM_ENDPOINT = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzJCkmghrsa0QyWkIzMloZamx9xhp3IpKj4968U5S-uqO7NWVPRXneXhzf3TmHDgatrQQ/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
   const D = window.SITE_DATA;
